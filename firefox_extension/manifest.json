@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+    "name": "WTRobot",
+    "version": "1.0", 
+    "description": "Web Automation",
+    "homepage_url": "https://github.com/vishalvijayraghavan",
+    "icons": {
+      "48": "icons/bot.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*/*","http://*/*"],
+        "js": ["extension.js"]
+      }
+    ],
+
+    "browser_action": {
+        "default_icon": {
+          "19": "icons/bot.png",
+          "38": "icons/bot.png"
+        },
+        "browser_style": true,
+        "default_title": "WTRobot :)"
+    },
+    "permissions": [
+        "http://*/*", 
+        "https://*/*",
+        "tabs",
+        "activeTab",
+        "webRequest",
+        "contextMenus",
+        "downloads",
+        "webNavigation",
+        "notifications",
+        "storage",
+        "debugger"
+      ]
+}
